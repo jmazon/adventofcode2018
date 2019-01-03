@@ -23,4 +23,3 @@ solve' nW o es0 = go (0,nW,es0,[]) where
                      go (t,w-1,M.delete m es,insert (t+taskTime m,m) tl)
                  | ((t',c):tl') <- tl = go (t',w+1,M.map (delete c) es,tl')
                  | M.null es = t
-
