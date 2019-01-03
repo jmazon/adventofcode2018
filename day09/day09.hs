@@ -22,7 +22,14 @@ solve np nm = maximum $ map sum $ transpose $ chunksOf np $
               snd $ mapAccumL insertMarble circle0 [1..nm]
 
 main = do
-  [np,nm] <- map read <$> getArgs
+  [np,nm] <- getInput
   print $ solve np nm
   print $ solve np (nm*100)
-  
+
+getInput = do
+  args <- map read <$> getArgs
+  case args of
+    [_,_] -> return args
+    _ -> do
+      [np,_,_,_,_,_,nm,_] <- map read . words <$> getContents
+      return [np,nm]
