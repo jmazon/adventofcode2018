@@ -1,0 +1,89 @@
+* adventofcode2018
+
+Totally a habit.
+
+A rough year for me, with a travel-ridden December, little free time,
+and general health instability.  This may have made me a bit
+oversensitive to the perceived unnatural imperativeness of a few
+puzzles, which clashes with my idiomatic Haskell somewhat.  Please
+take the grumpy comments in the specific days' READMEs with a grain of
+salt.
+
+Obviously, I was never up or available in a reasonable condition at
+Aoc midnight, so no puzzle really exhibit any time pressure.  Some
+(notably 21) were actually solved offline, and idle, as its timing
+blatantly yells.
+
+At any rate AoC remains in my view an extremely high-quality puzzle
+compendium, and I know a thing or two about problem setting by now.
+
+Thanks again @topaz and team!
+
+** Personal code comments
+
+I don't think there's anything particularly noteworthy in my
+contribution this year.  Yet.
+
+Day 1 does feature rather compact code.
+
+Days 9, 14 and 17 definitely deserve another look as to algorithmic
+complexity.  Possibly 11 and 22 as well.
+
+All assembly-related puzzles are still expected to undergo factoring,
+and if possibly better automation to streamline the
+reverse-engineering a bit more.
+
+Lastly, I'm still planning on pushing the knot-tying a bit further on
+day 22, so as to get rid of the array altogether, only compute
+locations that are needed by the search, and still not waste too much
+memory.  Watch this space.  (Then there's the obvious transition from
+Dijstra to A*, and for once birectional search is actually a good
+fit!)
+
+Branch raw is a merged dump of what I had on my computers after
+reaching fifty stars; branch master (you're on it) is what I consider
+presentation-worthy.  With variable standards.
+
+** Statistics
+
+|-----+---------------------------------------+----------+-------+-------------+----------|
+| Day | Puzzle                                | Language | Lines | Interpreted | Compiled |
+|-----+---------------------------------------+----------+-------+-------------+----------|
+|   1 | Chronal Calibration                   | bash     |     2 |       0.409 |          |
+|   2 | Inventory Management System           | Haskell  |    10 |       0.895 |          |
+|   3 | No Matter How You Slice It            | Perl     |    22 |       1.133 |        ¹ |
+|   4 | Repose Record                         | Perl     |    65 |       0.033 |          |
+|   5 | Alchemical Reduction                  | Perl     |    21 |       0.724 |          |
+|   6 | Chronal Coordinates                   | Haskell  |    41 |      24.000 |    3.214 |
+|   7 | The Sum of Its Parts                  | Haskell  |    25 |       0.567 |          |
+|   8 | Memory Maneuver                       | Haskell  |    20 |       0.602 |          |
+|   9 | Marble Mania                          | Haskell  |    35 |     186.279 |   75.655 |
+|  10 | The Stars Align                       | Haskell  |    44 |      29.074 |    5.190 |
+|  11 | Chronal Charge                        | Haskell  |    23 |      18.470 |   16.195 |
+|  12 | Subterranean Sustainability           | Haskell  |    23 |       0.671 |          |
+|  13 | Mine Cart Madness                     | Haskell  |    59 |       1.556 |          |
+|  14 | Chocolate Charts                      | Haskell  |    31 |             |   36.471 |
+|  15 | Beverage Bandits                      | Haskell  |    22 |      68.553 |    4.148 |
+|  16 | Chronal Classification                | Haskell  |    57 |       0.887 |          |
+|  17 | Reservoir Research                    | Haskell  |    46 |      53.835 |   18.630 |
+|  18 | Settlers of the North Pole            | Haskell  |    33 |      60.013 |    1.925 |
+|  19 | Go With The Flow                      | N/A      |   N/A |         N/A |      N/A |
+|  20 | A Regular Map                         | Haskell  |    62 |       1.808 |          |
+|  21 | Chronal Conversion                    | sed,awk  |   N/R |    3600.00² |          |
+|  22 | Mode Maze                             | Haskell  |    67 |      93.811 |   12.062 |
+|  23 | Experimental Emergency Transportation | Haskell  |    78 |      17.313 |    0.690 |
+|  24 | Immune System Simulator 20XX          | Haskell  |   119 |      13.117 |    0.685 |
+|  25 | Four-Dimensional Adventure            | Haskell  |    41 |       6.079 |          |
+|-----+---------------------------------------+----------+-------+-------------+----------|
+
+[1] Nobody seems to agree whether Perl 5 is interpreted or compiled.
+Well, my table only has two columns, so there.
+
+[2] Run offline using a compiled Haskell interpreter of the patched
+code.  So I'm classifying as interpreted (which the source code is),
+as opposed to compiled, which would be if (when) I had it transpiled.
+
+** TODO fix aoc15
+** TODO implement aoc19
+** TODO pessimize aoc20 some more
+** TODO quarter-plane for aoc22
